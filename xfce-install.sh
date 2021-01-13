@@ -18,7 +18,7 @@ mkdir -p /usr/local/etc/X11/xorg.conf.d/
 sh -c "cat ./vmware.conf >> /usr/local/etc/X11/xorg.conf.d/vmware.conf"
 
 ## add username to video group
-pw groupmod video -M $USER
+pw groupmod video -M $SUDO_USER
 
 ## update rc.conf
 sysrc hald_enable="YES"
@@ -29,7 +29,7 @@ sysrc moused_enable="YES"
 sh -c "echo kern.vty=vt >> /boot/loader.conf"
 
 ## install .xinitrc
-echo "exec /usr/local/bin/startxfce4 --with-ck-launch" > ~/.xinitrc
+sh -c  'echo "exec /usr/local/bin/startxfce4 --with-ck-launch" > /home/$SUDO_USER/.xinitrc'
 
 pkg install -y \
     xorg \
@@ -38,3 +38,6 @@ pkg install -y \
     xf86-input-vmmouse \
     xfce \
 
+echo 
+echo xfce install complete, please reboot and issue 'startx'
+echo
