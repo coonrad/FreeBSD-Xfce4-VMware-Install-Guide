@@ -8,7 +8,7 @@ A guide to install the Xfce Desktop Environment on FreeBSD 12.2 running as a gue
 
 * FreeBSD installed as a guest operating system on VMware.
 
-* Installation of sudo or doas to run optional script `pkg install sudo`
+* Installation of sudo to run install script `pkg install sudo`
 
 * Installation of git to clone this repo `sudo pkg install git`
 
