@@ -25,7 +25,9 @@ There is currently a [bug](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=251
 ## Quick install Xfce 4.16 and required packages
 
 ```bash
-git clone 
+git clone git@github.com:coonrad/FreeBSD-Xfce4-VMware-Install-Guide.git
+cd cd FreeBSD-Xfce4-VMware-Install-Guide
+./
 ```
 
 ## Manually install Xfce 4.16 and required packages
