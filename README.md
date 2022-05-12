@@ -14,7 +14,7 @@ A guide to install the Xfce Desktop Environment on FreeBSD 12.2 running as a gue
 
 * Installation of bash to run install script `sudo pkg install bash`
 
-There is currently a [bug](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=251866) that prevents FreeBSD 12.2 from booting with EFI on VMware. So if you prefer EFI you will need to install FreeBSD 12.1 and then upgrade to 12.2 using `freebsd-update`. Otherwise just boot FreeBSD 12.2 with BIOS.
+There is currently a [bug](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=251866) that prevents FreeBSD 12.2 from booting with EFI on VMware. So if you prefer EFI you will need to install FreeBSD 12.1 and then upgrade to 12.2 using `freebsd-update`. Otherwise, just boot FreeBSD 12.2 with BIOS.
 
 ## ISOs for Installing FreeBSD
 
@@ -138,7 +138,7 @@ Update `rc.conf` to start lightdm:
 sudo sysrc lightdm_enable="YES"
 ```
 
-On vmware lightdm defaults to a display size that may not match your screen. To correct this, create an xrandr script that will be executed by lightdm to establish the correct display size. Example `/usr/local/etc/lightdm/lightdm-xrandr`:
+On vmware lightdm defaults to a display size that may not match your screen. To correct this, create a xrandr script that will be executed by lightdm to establish the correct display size. Example `/usr/local/etc/lightdm/lightdm-xrandr`:
 
 ```bash
 #! /usr/local/bin/bash
