@@ -2,7 +2,7 @@
 
 ## FreeBSD Xfce4 on VMware Installation Guide
 
-A guide to install the Xfce Desktop Environment on FreeBSD 12.2 running as a guest operating system on VMware (tested on VMware Fusion 11.5.7). This guide includes configuration files and an optional configuration script.
+A guide to install the Xfce Desktop Environment on FreeBSD 14.0-RELEASE running as a guest operating system on VMware (tested on VMware Fusion 13.5.0). This guide includes configuration files and an optional configuration script.
 
 ## Requirements
 
@@ -14,15 +14,14 @@ A guide to install the Xfce Desktop Environment on FreeBSD 12.2 running as a gue
 
 * Installation of bash to run install script `sudo pkg install bash`
 
-There is currently a [bug](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=251866) that prevents FreeBSD 12.2 from booting with EFI on VMware. So if you prefer EFI you will need to install FreeBSD 12.1 and then upgrade to 12.2 using `freebsd-update`. Otherwise, just boot FreeBSD 12.2 with BIOS.
+Note: Hardware acceleration doesn't currently work with FreeBSD on VMware. The driver was [removed](https://github.com/freebsd/drm-kmod/commit/ff9d303c7ea85cd8627d0a3dc0dbccceefd30687)
 
 ## ISOs for Installing FreeBSD
 
-* [FreeBSD-12.2-RELEASE-amd64-bootonly.iso](https://download.freebsd.org/ftp/releases/amd64/amd64/ISO-IMAGES/12.2/FreeBSD-12.2-RELEASE-amd64-bootonly.iso "FreeBSD-12.2-RELEASE-amd64-bootonly.iso")
+* [FreeBSD-14.0-RELEASE](https://download.freebsd.org/releases/amd64/amd64/ISO-IMAGES/14.0/)
+* [FreeBSD-13.2-RELEASE](https://download.freebsd.org/releases/amd64/amd64/ISO-IMAGES/13.2/)
 
-* [FreeBSD-12.1-RELEASE-amd64-bootonly.iso](https://download.freebsd.org/ftp/releases/amd64/amd64/ISO-IMAGES/12.1/FreeBSD-12.1-RELEASE-amd64-bootonly.iso "FreeBSD-12.1-RELEASE-amd64-bootonly.iso")
-
-## Quick install Xfce 4.16 and required packages
+## Quick install Xfce 4.18 and required packages
 
 ```bash
 git clone https://github.com/coonrad/FreeBSD-Xfce4-VMware-Install-Guide.git
@@ -30,7 +29,7 @@ cd FreeBSD-Xfce4-VMware-Install-Guide
 sudo ./xfce-install.sh
 ```
 
-## Manually install Xfce 4.16 and required packages
+## Manually install Xfce 4.18 and required packages
 
 Update the pkg repository to `latest` to install the most recent version of Xfce:
 
@@ -52,7 +51,7 @@ When you run `pkg -vv` you should see the following:
 ```bash
 Repositories:
   FreeBSD: {
-    url             : "pkg+http://pkg.FreeBSD.org/FreeBSD:12:amd64/latest",
+    url             : "pkg+http://pkg.FreeBSD.org/FreeBSD:14:amd64/latest",
     enabled         : yes,
     priority        : 0,
     mirror_type     : "SRV",
