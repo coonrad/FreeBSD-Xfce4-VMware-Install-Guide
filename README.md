@@ -7,11 +7,8 @@ A guide to install the Xfce Desktop Environment on FreeBSD 14.0-RELEASE running 
 ## Requirements
 
 * FreeBSD installed as a guest operating system on VMware.
-
 * Installation of sudo to run install script `pkg install sudo`
-
 * Installation of git to clone this repo `sudo pkg install git`
-
 * Installation of bash to run install script `sudo pkg install bash`
 
 Note: Hardware acceleration doesn't currently work with FreeBSD on VMware. The driver was [removed](https://github.com/freebsd/drm-kmod/commit/ff9d303c7ea85cd8627d0a3dc0dbccceefd30687)
