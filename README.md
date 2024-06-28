@@ -15,7 +15,7 @@ Note: Hardware acceleration doesn't currently work with FreeBSD on VMware. The d
 
 ## ISOs for Installing FreeBSD
 
-* [FreeBSD-14.0-RELEASE](https://download.freebsd.org/releases/amd64/amd64/ISO-IMAGES/14.0/)
+* [FreeBSD-14.1-RELEASE](https://download.freebsd.org/releases/amd64/amd64/ISO-IMAGES/14.1/)
 * [FreeBSD-13.2-RELEASE](https://download.freebsd.org/releases/amd64/amd64/ISO-IMAGES/13.2/)
 
 ## Quick install Xfce 4.18 and required packages
